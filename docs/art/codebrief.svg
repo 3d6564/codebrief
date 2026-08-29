@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Codebrief</title>
+  <desc id="desc">Repository evidence and developer decisions pass through an interview into an approved INSTRUCTIONS.md brief, while unresolved questions remain separate.</desc>
+
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#26324a" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff9e9"/>
+      <stop offset="1" stop-color="#e9dfc5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#050912" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="24" fill="#0d1424"/>
+  <rect width="1200" height="360" rx="24" fill="url(#grid)" opacity=".55"/>
+  <path d="M0 286C172 233 304 330 469 280s294-40 402 3 214 42 329-13v90H0z" fill="#111d32"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="64" y="81" fill="#f6ae4a" font-size="16" font-weight="700" letter-spacing="4">INSPECT  /  ASK  /  CONFIRM</text>
+    <text x="60" y="146" fill="#fff9e9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="800" letter-spacing="-2">Codebrief</text>
+    <text x="64" y="190" fill="#aebbd0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">Turn project context into instructions an agent can follow.</text>
+
+    <g font-size="14" font-weight="700">
+      <rect x="64" y="238" width="151" height="38" rx="19" fill="#18253d" stroke="#52627d"/>
+      <circle cx="86" cy="257" r="5" fill="#68d5c1"/>
+      <text x="101" y="262" fill="#dce6f5">REPOSITORY</text>
+
+      <rect x="64" y="288" width="151" height="38" rx="19" fill="#18253d" stroke="#52627d"/>
+      <circle cx="86" cy="307" r="5" fill="#f6ae4a"/>
+      <text x="101" y="312" fill="#dce6f5">DEVELOPER</text>
+    </g>
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M215 257h74c29 0 29 25 54 25h41" stroke="#68d5c1" stroke-width="3"/>
+      <path d="M215 307h74c29 0 29-25 54-25h41" stroke="#f6ae4a" stroke-width="3"/>
+      <path d="M518 282h88" stroke="#e9dfc5" stroke-width="3"/>
+      <path d="m597 274 10 8-10 8" stroke="#e9dfc5" stroke-width="3"/>
+    </g>
+
+    <g transform="translate(384 229)">
+      <rect width="134" height="106" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <path d="M32 38h70M32 54h50M32 70h61" stroke="#aebbd0" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="20" cy="38" r="4" fill="#68d5c1"/>
+      <circle cx="20" cy="54" r="4" fill="#f6ae4a"/>
+      <circle cx="20" cy="70" r="4" fill="#aebbd0"/>
+      <text x="67" y="94" text-anchor="middle" fill="#dce6f5" font-size="11" font-weight="700" letter-spacing="2">INTERVIEW</text>
+    </g>
+
+    <g transform="translate(633 45)" filter="url(#shadow)">
+      <path d="M0 0h390l70 70v230H0z" fill="url(#paper)"/>
+      <path d="M390 0v70h70" fill="#d0c3a4"/>
+      <path d="M390 0v70h70" fill="none" stroke="#9d8e6d" stroke-width="2"/>
+
+      <text x="36" y="54" fill="#a04729" font-size="13" font-weight="800" letter-spacing="3">APPROVED BRIEF</text>
+      <text x="36" y="94" fill="#172035" font-size="23" font-weight="800">INSTRUCTIONS.md</text>
+      <path d="M36 112h352" stroke="#b9aa89" stroke-width="2"/>
+
+      <g font-size="14">
+        <circle cx="42" cy="142" r="6" fill="#318979"/>
+        <path d="m39 142 2 2 4-5" fill="none" stroke="#fff9e9" stroke-width="1.5"/>
+        <text x="60" y="147" fill="#313b4d">Observed project facts</text>
+
+        <circle cx="42" cy="174" r="6" fill="#c46c27"/>
+        <path d="m39 174 2 2 4-5" fill="none" stroke="#fff9e9" stroke-width="1.5"/>
+        <text x="60" y="179" fill="#313b4d">Confirmed developer choices</text>
+
+        <circle cx="42" cy="206" r="6" fill="#318979"/>
+        <path d="m39 206 2 2 4-5" fill="none" stroke="#fff9e9" stroke-width="1.5"/>
+        <text x="60" y="211" fill="#313b4d">Exact commands and boundaries</text>
+      </g>
+
+      <path d="M36 236h352" stroke="#b9aa89" stroke-width="2" stroke-dasharray="5 6"/>
+      <rect x="36" y="255" width="226" height="28" rx="14" fill="#ddd2b8"/>
+      <circle cx="52" cy="269" r="5" fill="#766b58"/>
+      <text x="65" y="274" fill="#665d4e" font-size="12" font-weight="700">UNRESOLVED STAYS UNWRITTEN</text>
+    </g>
+  </g>
+</svg>

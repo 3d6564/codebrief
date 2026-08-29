@@ -27,12 +27,16 @@ for coding agents. It is an interview assistant, not a code generator.
 - `prompt/codebrief.md`: canonical interview prompt.
 - `packaging/`: per-agent frontmatter and OpenCode command.
 - `docs/INTERVIEW_DESIGN.md`: interview stages and design decisions.
+- `docs/art/`: mark and other artwork.
 - `install.sh`: installer. `--agent` is required with `--yes`.
 - `tests/test_install.sh`: offline scaffold and installer checks.
+- `CONTRIBUTING.md`: branch, PR, and review workflow.
+- `LICENSE`: MIT.
 
 ## Verification
 
 - Run `bash tests/test_install.sh` after changing the prompt, packaging, or
   installer.
 - Keep `README.md` usage examples aligned with `install.sh`.
+- Follow `CONTRIBUTING.md` for branches, PRs, and merge cleanup.
 - Restart the target coding agent after installing or updating Codebrief.
