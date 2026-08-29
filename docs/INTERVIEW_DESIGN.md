@@ -99,3 +99,5 @@ The generated `INSTRUCTIONS.md` should:
 - Reading `.env`, credentials, private keys, recordings, databases, or generated
   evidence
 - Silently changing other agent configuration files
+- Installing Codebrief into `AGENTS.md`, `CLAUDE.md`, or
+  `copilot-instructions.md`. Those files guide the project's coding agent.

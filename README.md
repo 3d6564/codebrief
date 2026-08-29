@@ -24,34 +24,36 @@ Codebrief builds that brief from repository evidence and developer decisions.
 
 ## Install
 
-Install the agent and command for your user account:
+Choose a coding agent. `--agent` is required with `--yes`. Without `--yes`, an
+interactive terminal can pick one.
 
 ```bash
-./install.sh --global
+./install.sh --agent opencode --global
+./install.sh --agent claude --local /path/to/project
 ```
 
-Or install them only in one project:
+| `--agent` | Global path | Local path | How to run |
+| --- | --- | --- | --- |
+| `opencode` | `~/.config/opencode/agents/` and `commands/` | `.opencode/agents/` and `commands/` | Select `codebrief` or run `/codebrief` |
+| `prompt` | `~/.config/codebrief/codebrief.md` | `.codebrief/codebrief.md` | Point any agent at that file |
+| `claude` | `~/.claude/agents/` and `~/.claude/skills/codebrief/` | `.claude/agents/` and `.claude/skills/codebrief/` | `/codebrief` or `claude --agent codebrief` |
+| `cursor` | `~/.cursor/skills/codebrief/` | `.cursor/skills/codebrief/` | `/codebrief` in Agent chat |
+| `copilot` | `~/.copilot/agents/codebrief.agent.md` | `.github/agents/codebrief.agent.md` | Select the `codebrief` custom agent |
+| `codex` | `~/.codex/agents/codebrief.toml` | `.codex/agents/codebrief.toml` | Ask Codex to use the `codebrief` agent |
 
-```bash
-./install.sh --local /path/to/project
-```
+Use `--yes` for a non-interactive install. The installer copies files, so rerun
+it after changing Codebrief itself. Restart the target agent after install.
 
-Use `--yes` for a non-interactive install. The installer copies the files, so
-rerun it after changing Codebrief itself.
-
-Quit and restart OpenCode after installation. OpenCode loads agents and commands
-only at startup.
+Codebrief does not write into `AGENTS.md`, `CLAUDE.md`, or
+`copilot-instructions.md`. Those files guide the project's coding agent, not
+this interview.
 
 ## Use
 
-Start OpenCode in the project that needs instructions. Select the `codebrief`
-agent or run:
+Start your coding agent in the project that needs instructions, then invoke
+Codebrief as shown in the table above.
 
-```text
-/codebrief
-```
-
-Optional text after the command can set a focus:
+Optional text after `/codebrief` can set a focus:
 
 ```text
 /codebrief deep interview, focus on logging and deployment

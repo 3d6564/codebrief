@@ -18,50 +18,82 @@ assert_contains() {
     grep -qF -- "$2" "$1" || fail "$1 does not contain: $2"
 }
 
-assert_file "$PROJECT_DIR/agents/codebrief.md"
-assert_file "$PROJECT_DIR/commands/codebrief.md"
+assert_file "$PROJECT_DIR/prompt/codebrief.md"
+assert_file "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md"
+assert_file "$PROJECT_DIR/packaging/opencode/command.md"
 assert_file "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md"
 
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "mode: primary"
-assert_contains "$PROJECT_DIR/agents/codebrief.md" '"*": deny'
-assert_contains "$PROJECT_DIR/agents/codebrief.md" '"*.env": deny'
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "task: deny"
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "Ask two to four related questions at a time."
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "Comments, docstrings, and documentation"
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "Errors and logging"
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "Collaboration, issues, and version control"
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "Hard-rule follow-up"
-assert_contains "$PROJECT_DIR/agents/codebrief.md" "Pre-write checkpoint"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Collaboration, issues, and version control"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Hard-rule follow-up"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "If the host has a choice or question tool"
+assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "mode: primary"
+assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*": deny'
+assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*.env": deny'
+assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "task: deny"
+assert_contains "$PROJECT_DIR/packaging/opencode/command.md" 'User focus or target: `$ARGUMENTS`'
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "collaboration and version control"
-assert_contains "$PROJECT_DIR/commands/codebrief.md" 'User focus or target: `$ARGUMENTS`'
 
 if bash "$PROJECT_DIR/install.sh" --local >/dev/null 2>&1; then
     fail "--local without a path should fail"
 fi
 
+if bash "$PROJECT_DIR/install.sh" --global --yes >/dev/null 2>&1; then
+    fail "--yes without --agent should fail"
+fi
+
+if bash "$PROJECT_DIR/install.sh" --agent unknown --global --yes >/dev/null 2>&1; then
+    fail "unknown --agent should fail"
+fi
+
 mkdir -p "$TEMP_DIR/home" "$TEMP_DIR/project"
 
-HOME="$TEMP_DIR/home" bash "$PROJECT_DIR/install.sh" --global --yes >/dev/null
-GLOBAL_ROOT="$TEMP_DIR/home/.config/opencode"
-assert_file "$GLOBAL_ROOT/agents/codebrief.md"
-assert_file "$GLOBAL_ROOT/commands/codebrief.md"
-cmp -s "$PROJECT_DIR/agents/codebrief.md" "$GLOBAL_ROOT/agents/codebrief.md" \
-    || fail "global agent differs from source"
-cmp -s "$PROJECT_DIR/commands/codebrief.md" "$GLOBAL_ROOT/commands/codebrief.md" \
-    || fail "global command differs from source"
+HOME="$TEMP_DIR/home" bash "$PROJECT_DIR/install.sh" --agent opencode --global --yes >/dev/null
+OPENCODE_ROOT="$TEMP_DIR/home/.config/opencode"
+assert_file "$OPENCODE_ROOT/agents/codebrief.md"
+assert_file "$OPENCODE_ROOT/commands/codebrief.md"
+assert_contains "$OPENCODE_ROOT/agents/codebrief.md" "mode: primary"
+assert_contains "$OPENCODE_ROOT/agents/codebrief.md" "# Codebrief"
+cmp -s "$PROJECT_DIR/packaging/opencode/command.md" "$OPENCODE_ROOT/commands/codebrief.md" \
+    || fail "opencode command differs from packaging"
 
-bash "$PROJECT_DIR/install.sh" --local "$TEMP_DIR/project" --yes >/dev/null
-LOCAL_ROOT="$TEMP_DIR/project/.opencode"
-assert_file "$LOCAL_ROOT/agents/codebrief.md"
-assert_file "$LOCAL_ROOT/commands/codebrief.md"
+HOME="$TEMP_DIR/home" bash "$PROJECT_DIR/install.sh" --agent opencode --global --yes >/dev/null
 
-# A second install exercises the no-change path.
-HOME="$TEMP_DIR/home" bash "$PROJECT_DIR/install.sh" --global --yes >/dev/null
+bash "$PROJECT_DIR/install.sh" --agent opencode --local "$TEMP_DIR/project" --yes >/dev/null
+assert_file "$TEMP_DIR/project/.opencode/agents/codebrief.md"
+assert_file "$TEMP_DIR/project/.opencode/commands/codebrief.md"
+
+HOME="$TEMP_DIR/home" bash "$PROJECT_DIR/install.sh" --agent prompt --global --yes >/dev/null
+assert_file "$TEMP_DIR/home/.config/codebrief/codebrief.md"
+cmp -s "$PROJECT_DIR/prompt/codebrief.md" "$TEMP_DIR/home/.config/codebrief/codebrief.md" \
+    || fail "prompt install differs from source"
+
+bash "$PROJECT_DIR/install.sh" --agent claude --local "$TEMP_DIR/project" --yes >/dev/null
+assert_file "$TEMP_DIR/project/.claude/agents/codebrief.md"
+assert_file "$TEMP_DIR/project/.claude/skills/codebrief/SKILL.md"
+assert_contains "$TEMP_DIR/project/.claude/agents/codebrief.md" "name: codebrief"
+assert_contains "$TEMP_DIR/project/.claude/skills/codebrief/SKILL.md" "disable-model-invocation: true"
+assert_contains "$TEMP_DIR/project/.claude/skills/codebrief/SKILL.md" "# Codebrief"
+
+bash "$PROJECT_DIR/install.sh" --agent cursor --local "$TEMP_DIR/project" --yes >/dev/null
+assert_file "$TEMP_DIR/project/.cursor/skills/codebrief/SKILL.md"
+assert_contains "$TEMP_DIR/project/.cursor/skills/codebrief/SKILL.md" "disable-model-invocation: true"
+
+HOME="$TEMP_DIR/home" bash "$PROJECT_DIR/install.sh" --agent copilot --global --yes >/dev/null
+assert_file "$TEMP_DIR/home/.copilot/agents/codebrief.agent.md"
+assert_contains "$TEMP_DIR/home/.copilot/agents/codebrief.agent.md" "name: codebrief"
+
+bash "$PROJECT_DIR/install.sh" --agent copilot --local "$TEMP_DIR/project" --yes >/dev/null
+assert_file "$TEMP_DIR/project/.github/agents/codebrief.agent.md"
+
+HOME="$TEMP_DIR/home" bash "$PROJECT_DIR/install.sh" --agent codex --global --yes >/dev/null
+assert_file "$TEMP_DIR/home/.codex/agents/codebrief.toml"
+assert_contains "$TEMP_DIR/home/.codex/agents/codebrief.toml" 'name = "codebrief"'
+assert_contains "$TEMP_DIR/home/.codex/agents/codebrief.toml" "developer_instructions"
 
 mkdir -p "$TEMP_DIR/refusal-home/.config/opencode/agents"
 printf 'old agent\n' > "$TEMP_DIR/refusal-home/.config/opencode/agents/codebrief.md"
 if printf 'n\n' | HOME="$TEMP_DIR/refusal-home" \
-    bash "$PROJECT_DIR/install.sh" --global >/dev/null 2>&1; then
+    bash "$PROJECT_DIR/install.sh" --agent opencode --global >/dev/null 2>&1; then
     fail "declining replacement should return a failure"
 fi
 [[ ! -e "$TEMP_DIR/refusal-home/.config/opencode/commands/codebrief.md" ]] \
@@ -70,7 +102,7 @@ fi
 mkdir -p "$TEMP_DIR/conflict-home/.config/opencode/agent"
 printf 'competing agent\n' > "$TEMP_DIR/conflict-home/.config/opencode/agent/codebrief.md"
 if HOME="$TEMP_DIR/conflict-home" \
-    bash "$PROJECT_DIR/install.sh" --global --yes >/dev/null 2>&1; then
+    bash "$PROJECT_DIR/install.sh" --agent opencode --global --yes >/dev/null 2>&1; then
     fail "alternate agent path should block installation"
 fi
 

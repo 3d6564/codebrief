@@ -17,18 +17,22 @@ for coding agents. It is an interview assistant, not a code generator.
 - Cover git, issue, and board workflow when the target uses them; confirmed
   always-on constraints belong in `AGENTS.md`, with procedure in
   `INSTRUCTIONS.md` or `CONTRIBUTING.md`.
+- Keep `prompt/codebrief.md` as the interview source. Adapter frontmatter lives
+  under `packaging/`. Do not install Codebrief into `AGENTS.md`, `CLAUDE.md`, or
+  `copilot-instructions.md`.
 - Do not add an application runtime or model API dependency without a clear need.
 
 ## Project Layout
 
-- `agents/codebrief.md`: installed OpenCode primary agent.
-- `commands/codebrief.md`: installed `/codebrief` command.
+- `prompt/codebrief.md`: canonical interview prompt.
+- `packaging/`: per-agent frontmatter and OpenCode command.
 - `docs/INTERVIEW_DESIGN.md`: interview stages and design decisions.
-- `install.sh`: global or project-local OpenCode installer.
+- `install.sh`: installer. `--agent` is required with `--yes`.
 - `tests/test_install.sh`: offline scaffold and installer checks.
 
 ## Verification
 
-- Run `bash tests/test_install.sh` after changing installed files or the installer.
+- Run `bash tests/test_install.sh` after changing the prompt, packaging, or
+  installer.
 - Keep `README.md` usage examples aligned with `install.sh`.
-- Restart OpenCode after installing or updating the agent.
+- Restart the target coding agent after installing or updating Codebrief.
