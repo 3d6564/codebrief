@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Codebrief</title>
+  <desc id="desc">A folded brief with three interview lines.</desc>
+  <rect width="160" height="160" rx="20" fill="#2c2416"/>
+  <path fill="#f4ead5" d="M38 28h70l28 28v76H38z"/>
+  <path fill="#e2d4b8" d="M108 28v28h28"/>
+  <path fill="none" stroke="#2c2416" stroke-linecap="round" stroke-width="6" d="M54 84h52M54 104h52M54 124h32"/>
+  <circle cx="54" cy="84" r="4" fill="#c45c26"/>
+  <circle cx="54" cy="104" r="4" fill="#c45c26"/>
+  <circle cx="54" cy="124" r="4" fill="#c45c26"/>
+</svg>

@@ -1,5 +1,18 @@
 # Codebrief
 
+<p align="center">
+  <img src="docs/art/codebrief.svg" width="128" alt="A folded brief with three interview lines.">
+</p>
+
+```
+  ╭──────────────────────────────────╮
+  │  C O D E B R I E F            ▟ │
+  │  ────────────────────────────────│
+  │  inspect  →  ask  →  brief       │
+  │  INSTRUCTIONS.md                 │
+  ╰──────────────────────────────────╯
+```
+
 Codebrief is an interview assistant that learns how a developer wants a project
 handled, then writes those choices to `INSTRUCTIONS.md` for a coding agent.
 
@@ -100,5 +113,14 @@ topics, and output contract.
 bash tests/test_install.sh
 ```
 
-The tests use temporary directories and do not change the user's OpenCode
-configuration.
+The tests use temporary directories and do not change the user's agent
+configuration. GitHub Actions runs the same command on pull requests and on
+`main`.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
