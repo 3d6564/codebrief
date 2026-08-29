@@ -30,6 +30,7 @@ assert_file "$PROJECT_DIR/.github/workflows/ci.yml"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Collaboration, issues, and version control"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Hard-rule follow-up"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "If the host has a choice or question tool"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'instead of "canonical"'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "mode: primary"
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*": deny'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*.env": deny'

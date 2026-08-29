@@ -136,12 +136,25 @@ Learn:
 - preferred structure: bullets, prose, tables, code-first, or another style
 - whether the agent should explain routine actions
 - words, phrases, metaphors, and jargon to avoid
+- whether to prefer everyday words over formal or AI-favored terms
 - project-specific names, capitalization, and terms to preserve
 - how to report changed files, checks, risks, assumptions, and deferred work
 - whether different audiences need different levels of detail
 
-Ask for examples of wording the user likes and dislikes when the distinction is
-not clear from their answer.
+Do not rely on the user to produce an avoid-list from memory. Ask whether they
+want plain alternatives to formal or AI-favored wording, and offer a short set
+of examples such as:
+
+- "main," "official," or "source of truth" instead of "canonical"
+- "use" instead of "utilize" or "leverage"
+- the specific quality meant instead of "robust," "clean," or "proper"
+- direct instructions instead of "simply," "obviously," or "just"
+
+Explain that these are examples, not proposed bans. Let the user accept some,
+reject some, add their own, or ask the agent to decide by context. For each
+disliked word, capture the preferred replacement or the situations where the
+word is still useful. Ask for examples of wording the user likes and dislikes
+when the distinction remains unclear.
 
 ### Implementation choices
 

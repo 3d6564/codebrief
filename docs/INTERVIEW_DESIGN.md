@@ -14,13 +14,15 @@ facts that cannot be learned safely from source files alone.
    separate during the interview.
 3. Ask in short sets. Use two to four related questions, then summarize and let
    the user choose where to go next.
-4. Branch by need. A CLI should not receive a long UI questionnaire, and a
+4. Coach preference questions. When users may not know the available terms,
+   offer a few plain examples without treating them as recommended answers.
+5. Branch by need. A CLI should not receive a long UI questionnaire, and a
    static site should not receive an ML model-governance questionnaire.
-5. Preserve uncertainty. Unanswered questions remain open; they do not become
+6. Preserve uncertainty. Unanswered questions remain open; they do not become
    rules.
-6. Preview before writing. The user sees proposed rules and conflicts before a
+7. Preview before writing. The user sees proposed rules and conflicts before a
    target file changes.
-7. Write practical instructions. Prefer exact commands, paths, boundaries, and
+8. Write practical instructions. Prefer exact commands, paths, boundaries, and
    examples over broad advice.
 
 ## Stages
