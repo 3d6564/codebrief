@@ -21,6 +21,8 @@ for coding agents. It is an interview assistant, not a code generator.
   under `packaging/`. Do not install Codebrief into `AGENTS.md`, `CLAUDE.md`, or
   `copilot-instructions.md`.
 - Do not add an application runtime or model API dependency without a clear need.
+- After a pull request is merged, delete its local and remote branches. Never
+  reuse a merged branch; start later work from the current `origin/main`.
 
 ## Project Layout
 

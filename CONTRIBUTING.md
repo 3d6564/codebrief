@@ -12,9 +12,13 @@ branches and lands through pull requests.
 4. When required checks pass, open a pull request without waiting to be asked.
    Tell the owner it is ready to review.
 5. Squash merge after review.
-6. After merge, update local `main` and delete the local topic branch.
+6. After merge, update local `main` and delete both the local and remote topic
+   branches.
+7. Treat a merged branch as closed. For any later change, fetch `origin`, create
+   a new branch from the current `origin/main`, and open a separate pull request.
 
-Do not use long-lived developer branches.
+Do not reuse merged branches or use long-lived developer branches. If a merged
+branch was not deleted, delete it instead of adding more commits.
 
 ## Required checks
 
