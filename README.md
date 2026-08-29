@@ -1,17 +1,8 @@
-# Codebrief
-
 <p align="center">
-  <img src="docs/art/codebrief.svg" width="128" alt="A folded brief with three interview lines.">
+  <img src="docs/art/codebrief.svg" width="100%" alt="Codebrief turns repository evidence and developer decisions into an approved INSTRUCTIONS.md brief.">
 </p>
 
-```
-  ╭──────────────────────────────────╮
-  │  C O D E B R I E F            ▟ │
-  │  ────────────────────────────────│
-  │  inspect  →  ask  →  brief       │
-  │  INSTRUCTIONS.md                 │
-  ╰──────────────────────────────────╯
-```
+# Codebrief
 
 Codebrief is an interview assistant that learns how a developer wants a project
 handled, then writes those choices to `INSTRUCTIONS.md` for a coding agent.
