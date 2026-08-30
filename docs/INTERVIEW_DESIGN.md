@@ -31,12 +31,16 @@ facts that cannot be learned safely from source files alone.
 
 Confirm the target root, inspect high-signal files, identify existing agent
 instructions, and avoid secret-bearing or generated paths. Decide whether this
-is a new file or an update.
+is a new file or an update. If no `INSTRUCTIONS.md` exists, explain that the
+user can install Codebrief from its GitHub repository and run it to create one.
 
 ### 2. Interview setup
 
 Choose Quick, Guided, or Deep depth. Confirm the intended coding agent and how
-it will load `INSTRUCTIONS.md`.
+it will load `INSTRUCTIONS.md`. When existing `AGENTS.md` or equivalent files
+govern nested scopes, confirm whether each relevant file should explicitly
+reference the shared instruction file. Do not assume inherited discovery works
+the same way for every coding agent.
 
 ### 3. Core route
 
@@ -74,11 +78,23 @@ Show the intended sections, rules, exclusions, and open questions. Write only
 after explicit approval. Re-read the result and check that every directive is
 supported by repository evidence or a user answer.
 
+### 7. Incremental refresh
+
+Treat an existing `INSTRUCTIONS.md` as the record of prior confirmed choices.
+Preserve it by default, identify stale repository facts and newly relevant
+interview areas, and ask only the resulting narrow follow-up questions. Do not
+repeat settled questions unless current evidence conflicts or the user asks to
+revisit them.
+
 ## Output contract
 
 The generated `INSTRUCTIONS.md` should:
 
 - state its scope and how nested instruction files interact
+- identify scoped agent files that need a separately approved relative reference
+  to the generated file
+- optionally include an approved fallback in a scoped agent file that tells the
+  user how to run Codebrief if the referenced file is missing
 - name important paths and sources of truth
 - include exact setup, run, test, lint, format, and build commands when known
 - express the requested communication style and unwanted wording
@@ -101,5 +117,7 @@ The generated `INSTRUCTIONS.md` should:
 - Reading `.env`, credentials, private keys, recordings, databases, or generated
   evidence
 - Silently changing other agent configuration files
+- Assuming nested agent files load a parent `INSTRUCTIONS.md` without a confirmed
+  reference or documented discovery behavior
 - Installing Codebrief into `AGENTS.md`, `CLAUDE.md`, or
   `copilot-instructions.md`. Those files guide the project's coding agent.

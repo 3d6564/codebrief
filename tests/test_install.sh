@@ -29,6 +29,10 @@ assert_file "$PROJECT_DIR/.github/workflows/ci.yml"
 
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Collaboration, issues, and version control"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Hard-rule follow-up"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Scoped-reference follow-up"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "should explicitly reference a shared"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "record of prior confirmed decisions"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "https://github.com/3d6564/codebrief"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "If the host has a choice or question tool"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'instead of "canonical"'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "mode: primary"
@@ -37,6 +41,8 @@ assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*.env":
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "task: deny"
 assert_contains "$PROJECT_DIR/packaging/opencode/command.md" 'User focus or target: `$ARGUMENTS`'
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "collaboration and version control"
+assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "should explicitly"
+assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "Incremental refresh"
 
 if bash "$PROJECT_DIR/install.sh" --local >/dev/null 2>&1; then
     fail "--local without a path should fail"
