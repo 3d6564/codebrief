@@ -75,6 +75,11 @@ It does not write during discovery. Before creating or updating
 questions, and asks for approval. Confirmed always-on constraints can later be
 added to `AGENTS.md` or `CONTRIBUTING.md` as a separate approved change.
 
+Run Codebrief again after updating it or when the repository changes. It treats
+the existing `INSTRUCTIONS.md` as the record of prior decisions and asks only
+about gaps, changed project evidence, newly relevant topics, or choices you
+want to revise.
+
 ## Loading the result
 
 `INSTRUCTIONS.md` is intentionally tool-neutral. Not every coding agent loads
