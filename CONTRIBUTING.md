@@ -1,7 +1,7 @@
 # Contributing
 
-Codebrief is a small interview-assistant project. Work happens on short-lived
-branches and lands through pull requests.
+Codefactory packages focused coding-agent capabilities. Work happens on
+short-lived branches and lands through pull requests.
 
 ## Workflow
 
@@ -24,18 +24,19 @@ branch was not deleted, delete it instead of adding more commits.
 
 ```bash
 bash tests/test_install.sh
+bash components/codebrief/tests/test_install.sh
+bash components/codereview/tests/test_install.sh
 ```
 
 The tests use temporary directories and do not change the user's agent config.
 
 ## Change rules
 
-- Read `AGENTS.md` and `docs/INTERVIEW_DESIGN.md`.
-- Keep `prompt/codebrief.md` as the interview source.
-- Keep adapter frontmatter under `packaging/`.
+- Read `AGENTS.md` and the changed component's `AGENTS.md`.
+- Keep each canonical prompt under its component's `prompt/` directory.
+- Keep adapter frontmatter under the component's `packaging/` directory.
 - Do not invent other tools' config shapes.
-- Do not install Codebrief into `AGENTS.md`, `CLAUDE.md`, or
-  `copilot-instructions.md`.
+- Keep components independently installable.
 - Update `README.md` when setup, commands, or install targets change.
 - Do not commit secrets, `.env`, or generated local install copies.
 

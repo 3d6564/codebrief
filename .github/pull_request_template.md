@@ -5,6 +5,8 @@ Describe the change and why it is needed.
 ## Validation
 
 - [ ] `bash tests/test_install.sh`
+- [ ] `bash components/codebrief/tests/test_install.sh`
+- [ ] `bash components/codereview/tests/test_install.sh`
 - [ ] Additional validation is listed below, or is not required.
 
 ## Review Notes
