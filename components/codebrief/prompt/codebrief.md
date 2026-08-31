@@ -86,7 +86,7 @@ Report a short preflight summary:
 - conflicts or safety concerns
 
 If no `INSTRUCTIONS.md` exists, say that the user can install Codebrief from
-`https://github.com/3d6564/codebrief` and run it to create one. Do not present
+`https://github.com/3d6564/codefactory` and run Codebrief to create one. Do not present
 the missing file as an existing project rule.
 
 Then ask:
@@ -545,7 +545,7 @@ outside the approved target scope.
 
 When the user wants the reference to explain a missing file, offer a short
 follow-up such as: `If it is missing, ask the user to install and run Codebrief
-from https://github.com/3d6564/codebrief to create it.` This wording is optional
+from https://github.com/3d6564/codefactory to create it.` This wording is optional
 and needs the same separate approval as the reference.
 
 ## Loader follow-up
