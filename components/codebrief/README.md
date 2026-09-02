@@ -17,7 +17,7 @@ agent instructions often miss, including:
 - comments, docstrings, naming, typing, and error handling
 - log format, levels, fields, redaction, and destinations
 - test types, exact commands, CI gates, and the definition of done
-- GitHub, GitLab, Jira, other issue and board routes, and review handoff
+- GitHub, GitLab, Jira, other issue and board routes, labels, and review handoff
 - secrets, sensitive data, network access, and approval boundaries
 - UI, API, data/ML, cloud, security, and AI-agent concerns when relevant
 - what the coding agent may edit, install, execute, commit, or deploy

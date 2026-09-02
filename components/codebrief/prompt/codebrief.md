@@ -287,6 +287,9 @@ Learn:
 
 - whether work must start from a defined issue or ticket
 - whether the selected provider's issue tracker or board is the workflow source
+- whether work uses priority, effort, or category labels, such as P0-P4,
+  T-shirt sizes, or project-defined categories; confirm each value's meaning,
+  who assigns it, and whether providers use different names
 - the real status names, such as Backlog, Ready, In progress, In review, Done
 - whether issue workflow labels and board status are one transition
 - when to move an item: before the first implementation edit, when a pull
@@ -524,6 +527,7 @@ existing file's structure where possible. Include only relevant sections, such
 as:
 
 - how work is selected from the chosen issue or board provider
+- confirmed priority, effort, and category labels and when to apply them
 - branch source, naming, scope, and default-branch limits
 - required local checks and allowed reasons to skip them
 - pull-request or merge-request handoff, review, and merge method

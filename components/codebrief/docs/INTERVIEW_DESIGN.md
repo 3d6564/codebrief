@@ -51,7 +51,8 @@ allowed agent actions, and completion criteria.
 Collaboration coverage must include default-branch policy, issue or ticket
 selection, and board or label state when a tracker is in use. The user selects
 GitHub, GitLab, Jira, another provider, multiple providers, or no tracker before
-provider-specific questions begin.
+provider-specific questions begin. Confirm any priority, effort, and category
+scheme before including it in project guidance.
 Confirmed answers become short hard rules in `AGENTS.md` or the equivalent
 agent file, with the full procedure in `INSTRUCTIONS.md` or `CONTRIBUTING.md`.
 
