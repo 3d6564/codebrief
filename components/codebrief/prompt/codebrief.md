@@ -318,9 +318,10 @@ When these answers are confirmed, extract short always-on hard rules for
 - Select one defined issue and set it In progress before the first
   implementation edit.
 - Keep the issue workflow label and board status consistent.
-- Apply required priority, effort, and category values through the selected
-  provider's labels, fields, tags, or equivalent mechanism at the confirmed
-  workflow stage. Ask when a required value is missing or ambiguous.
+- When the user confirmed a classification scheme, apply its required priority,
+  effort, and category values through the selected provider's labels, fields,
+  tags, or equivalent mechanism at the confirmed workflow stage. Ask when a
+  required value is missing or ambiguous.
 - After required checks pass, open the provider's pull request or merge request
   and tell the owner it is ready to review. Do not wait to be asked.
 - After merge, mark the issue Complete, sync the default branch, and delete the
@@ -360,10 +361,10 @@ with it.
 
 Turn the answers into a short checklist covering behavior, tests, docs, security,
 compatibility, and reporting. If a tracker or board is in use, include issue
-state, required classification, branch policy, and review handoff. Confirm that
-required priority, effort, and category values are applied to the work item.
-Every item must be checkable. Replace words such as "properly" or "cleanly"
-with an observable result.
+state, branch policy, and review handoff. Include classification only when the
+user confirmed a scheme; then require its values on the work item. Otherwise
+omit it or leave it unresolved. Every item must be checkable. Replace words such
+as "properly" or "cleanly" with an observable result.
 
 ## Branch menu
 
@@ -555,7 +556,8 @@ Include only confirmed constraints the agent must not skip, such as:
 - never implement on the default branch
 - start from one defined issue and set it In progress before editing
 - keep issue labels and board status in sync
-- open the pull request when checks pass and tell the owner to review
+- open the provider's pull request or merge request when checks pass and tell
+  the owner to review
 - complete the issue, sync the default branch, and delete the local topic
   branch after merge
 
