@@ -39,6 +39,8 @@ assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'always ask whether to previe
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'only to guidance files that were approved'
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'priority, effort, or category labels'
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'T-shirt sizes'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "provider's labels, fields, tags"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'required classification, branch policy'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "mode: primary"
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*": deny'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*.env": deny'

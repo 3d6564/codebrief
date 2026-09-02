@@ -318,6 +318,9 @@ When these answers are confirmed, extract short always-on hard rules for
 - Select one defined issue and set it In progress before the first
   implementation edit.
 - Keep the issue workflow label and board status consistent.
+- Apply required priority, effort, and category values through the selected
+  provider's labels, fields, tags, or equivalent mechanism at the confirmed
+  workflow stage. Ask when a required value is missing or ambiguous.
 - After required checks pass, open the provider's pull request or merge request
   and tell the owner it is ready to review. Do not wait to be asked.
 - After merge, mark the issue Complete, sync the default branch, and delete the
@@ -357,8 +360,10 @@ with it.
 
 Turn the answers into a short checklist covering behavior, tests, docs, security,
 compatibility, and reporting. If a tracker or board is in use, include issue
-state, branch policy, and pull-request handoff. Every item must be checkable.
-Replace words such as "properly" or "cleanly" with an observable result.
+state, required classification, branch policy, and review handoff. Confirm that
+required priority, effort, and category values are applied to the work item.
+Every item must be checkable. Replace words such as "properly" or "cleanly"
+with an observable result.
 
 ## Branch menu
 
