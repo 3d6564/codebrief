@@ -9,7 +9,7 @@ tests.
 | Component | Purpose | Documentation |
 | --- | --- | --- |
 | `codebrief` | Interviews a developer and writes project-specific `INSTRUCTIONS.md`. | [Codebrief](components/codebrief/README.md) |
-| `codereview` | Reviews one GitHub pull request and reports findings before making remote changes. | [Codereview](components/codereview/README.md) |
+| `codereview` | Reviews one pull request or merge request by URL or number and reports findings before remote changes. | [Codereview](components/codereview/README.md) |
 
 ## Install
 

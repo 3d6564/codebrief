@@ -267,34 +267,13 @@ data in `INSTRUCTIONS.md`.
 ### Collaboration, issues, and version control
 
 Cover this at every depth when the repository uses git, a tracker, or a board.
-In Quick mode, still confirm default-branch policy and whether issue or board
-state must change before the first edit.
+In Quick mode, still choose the provider route, confirm default-branch policy,
+and ask whether issue or board state must change before the first edit.
 
-Inspect contribution docs, issue and pull-request templates, GitHub workflows,
-and existing agent rules. Do not invent label names, project numbers, status
+Inspect contribution docs, issue and review templates, provider workflows, and
+existing agent rules. Do not invent label names, project identifiers, status
 option IDs, or board field names. Use only names observed in the repository or
 confirmed by the user.
-
-Learn:
-
-- whether work must start from a defined issue or ticket
-- which tracker is in use: GitHub Issues, another tracker, or none
-- whether a GitHub Project, kanban, or other board is the workflow source
-- the real status names, such as Backlog, Ready, In progress, In review, Done
-- whether issue workflow labels and board status are one transition
-- when to move an item: before the first implementation edit, when a pull
-  request opens, after review, and after merge
-- whether the agent may edit the default branch; the usual hard rule is no
-- topic-branch naming, including issue-number prefixes
-- one concern per branch, and whether mixing issues needs explicit approval
-- when to open a pull request: as soon as required checks pass, or only when
-  asked
-- whether the agent should then stop and tell the owner to review
-- review, squash or merge, and required checks
-- after merge: mark the issue complete, sync the local default branch, and
-  delete the local topic branch
-- commit message style, signing, and whether history rewrites are forbidden
-- whether the provider should delete the remote topic branch on merge
 
 First offer GitHub Issues and Projects, GitLab Issues and Boards, Jira, another
 provider, multiple providers, or no tracker. A number alone does not identify a
@@ -303,6 +282,26 @@ statuses, transitions, review workflow, links, and available tools. For multiple
 providers, also confirm which owns each state and how linked items stay aligned.
 Do not invent provider details or commands. Ask before network access, and leave
 details unresolved when access is unavailable.
+
+Learn:
+
+- whether work must start from a defined issue or ticket
+- whether the selected provider's issue tracker or board is the workflow source
+- the real status names, such as Backlog, Ready, In progress, In review, Done
+- whether issue workflow labels and board status are one transition
+- when to move an item: before the first implementation edit, when a pull
+  request or merge request opens, after review, and after merge
+- whether the agent may edit the default branch; the usual hard rule is no
+- topic-branch naming, including issue-number prefixes
+- one concern per branch, and whether mixing issues needs explicit approval
+- when to open the provider's pull request or merge request: as soon as required
+  checks pass, or only when asked
+- whether the agent should then stop and tell the owner to review
+- review, squash or merge, and required checks
+- after merge: mark the issue complete, sync the local default branch, and
+  delete the local topic branch
+- commit message style, signing, and whether history rewrites are forbidden
+- whether the provider should delete the remote topic branch on merge
 
 If a tracker is connected but the user has not decided board automation, leave
 it unresolved. Never write a board workflow from guesses.
@@ -316,8 +315,8 @@ When these answers are confirmed, extract short always-on hard rules for
 - Select one defined issue and set it In progress before the first
   implementation edit.
 - Keep the issue workflow label and board status consistent.
-- After required checks pass, open the pull request and tell the owner it is
-  ready to review. Do not wait to be asked.
+- After required checks pass, open the provider's pull request or merge request
+  and tell the owner it is ready to review. Do not wait to be asked.
 - After merge, mark the issue Complete, sync the default branch, and delete the
   local topic branch.
 
@@ -518,10 +517,11 @@ questions. Do not perform any loader-file change in the same approval step.
 
 ### Writing `CONTRIBUTING.md`
 
-When the user wants shared contribution guidance, preview it after the
-`INSTRUCTIONS.md` decision and request separate approval. Create or update it
-from observed and confirmed workflow only. Follow an existing contribution
-file's structure where possible. Include only relevant sections, such as:
+After the `INSTRUCTIONS.md` decision, always ask whether to preview shared
+contribution guidance. Create or update `CONTRIBUTING.md` only after the user
+approves that preview. Use observed and confirmed workflow and follow an
+existing file's structure where possible. Include only relevant sections, such
+as:
 
 - how work is selected from the chosen issue or board provider
 - branch source, naming, scope, and default-branch limits
@@ -556,11 +556,11 @@ prose into the agent file. Do not invent tracker or board identifiers.
 
 ## Scoped-reference follow-up
 
-After `INSTRUCTIONS.md` is written, if an existing `AGENTS.md` or equivalent
+After project guidance is written, if an existing `AGENTS.md` or equivalent
 agent file is the entry point for work in its scope, offer a separate update
-that adds short relative references to the approved `INSTRUCTIONS.md` and
-`CONTRIBUTING.md` files. Ask about each root or nested file that needs a
-reference; do not silently apply a parent reference to all descendants.
+that adds short relative references only to guidance files that were approved
+and written. Ask about each root or nested file that needs a reference; do not
+silently apply a parent reference to all descendants.
 
 For example, a nested `services/api/AGENTS.md` may need a line such as
 `Read and follow ../INSTRUCTIONS.md` when that is the confirmed shared policy.
