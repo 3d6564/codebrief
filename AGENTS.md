@@ -14,6 +14,16 @@ agents. Current components are `codebrief` and `codereview`.
   Never infer the answer from the presence of `INSTRUCTIONS.md`.
 - Read the closest component `AGENTS.md` before changing that component.
 - Do not add an application runtime or model API dependency without approval.
+- Do not add a third component or a new agent install target without approval.
+- Never implement on `main`. Create and switch to a topic branch first.
+- Before the first implementation edit, select one or more GitHub Issues, set
+  `status: in-progress`, and require `P0`–`P4`, `XS`–`XL`, and `bug` /
+  `feature` / `docs` / `packaging`. Ask when a required value is missing or
+  unclear.
+- After required checks pass, open the pull request, set `status: in-review`,
+  and tell the owner it is ready to review.
+- After merge, set `status: done`, update local `main`, and delete the local
+  and remote topic branches.
 
 ## Project Layout
 
