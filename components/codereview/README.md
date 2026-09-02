@@ -1,7 +1,7 @@
 # Codefactory
 
 Codefactory packages focused capabilities for coding agents. The first is
-`codereview`: a report-first GitHub pull-request reviewer.
+`codereview`: a report-first pull-request and merge-request reviewer.
 
 Before reviewing, Codereview asks whether Codebrief has been used for the
 target. A confirmed answer makes the applicable instruction files required
@@ -34,15 +34,18 @@ agent after install.
 
 ## Use
 
-Run Codereview from the target repository and provide one pull-request number:
+Run Codereview from the target repository and provide one provider URL or an
+unambiguous pull-request or merge-request number:
 
 ```text
 /codereview 42
+/codereview https://gitlab.example.com/group/project/-/merge_requests/42
 ```
 
-Codereview asks before GitHub access, performs a read-only review by default,
-and reports findings with file and line references. It posts comments or creates
-follow-up issues only when explicitly requested.
+Codereview detects the repository provider and supports GitHub, GitLab, and
+other configured providers through available tools. It asks before network
+access, performs a read-only review by default, and reports findings with file
+and line references. It makes provider changes only when explicitly requested.
 
 ## Verify
 

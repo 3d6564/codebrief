@@ -32,6 +32,8 @@ assert_contains "$PROJECT_DIR/prompt/codebrief.md" "record of prior confirmed de
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "https://github.com/3d6564/codefactory"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "If the host has a choice or question tool"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'instead of "canonical"'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'GitLab Issues and Boards, Jira'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'Writing `CONTRIBUTING.md`'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "mode: primary"
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*": deny'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*.env": deny'

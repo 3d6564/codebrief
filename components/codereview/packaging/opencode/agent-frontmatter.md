@@ -1,5 +1,5 @@
 ---
-description: Reviews GitHub pull requests for correctness, contracts, and test coverage.
+description: Reviews pull requests and merge requests across source-control providers.
 mode: primary
 temperature: 0.2
 permission:
