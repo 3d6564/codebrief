@@ -7,9 +7,12 @@ trap 'rm -rf "$TEMP_DIR"' EXIT
 
 fail() { echo "FAIL: $1" >&2; exit 1; }
 assert_file() { [[ -f "$1" ]] || fail "missing file $1"; }
+assert_contains() { grep -qF -- "$2" "$1" || fail "$1 does not contain: $2"; }
 
 assert_file "$PROJECT_DIR/components/codebrief/install.sh"
 assert_file "$PROJECT_DIR/components/codereview/install.sh"
+assert_contains "$PROJECT_DIR/README.md" 'pull request or merge request by URL or number'
+assert_contains "$PROJECT_DIR/install.sh" 'pull request or merge request by URL or number'
 
 if bash "$PROJECT_DIR/install.sh" >/dev/null 2>&1; then
     fail "missing component should fail"

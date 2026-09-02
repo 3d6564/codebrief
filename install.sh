@@ -9,7 +9,7 @@ Usage: ./install.sh <component> [component options]
 
 Components:
   codebrief   Create project-specific coding-agent instructions
-  codereview  Review one GitHub pull request by number
+  codereview  Review one pull request or merge request by URL or number
 
 Examples:
   ./install.sh codebrief --agent opencode --global

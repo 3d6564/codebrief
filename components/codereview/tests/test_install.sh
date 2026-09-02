@@ -15,6 +15,9 @@ assert_file "$PROJECT_DIR/packaging/opencode/command.md"
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'For a more independent review'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Has Codebrief been used'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Do not infer the answer'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'GitHub, GitLab, and other'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'provider URL or a positive'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Do not block a local review'
 
 if bash "$PROJECT_DIR/install.sh" --local >/dev/null 2>&1; then
     fail "--local without a path should fail"
@@ -57,7 +60,7 @@ assert_file "$TEMP_DIR/project/.opencode/agents/codereview.md"
 assert_file "$TEMP_DIR/project/.opencode/commands/codereview.md"
 assert_contains "$TEMP_DIR/project/.opencode/agents/codereview.md" "For a more independent review"
 assert_contains "$TEMP_DIR/project/.opencode/agents/codereview.md" "Has Codebrief been used"
-assert_contains "$TEMP_DIR/project/.opencode/commands/codereview.md" 'number `$1`'
+assert_contains "$TEMP_DIR/project/.opencode/commands/codereview.md" 'reference `$ARGUMENTS`'
 
 mkdir -p "$TEMP_DIR/refusal-home/.config/opencode/agents"
 printf 'old agent\n' > "$TEMP_DIR/refusal-home/.config/opencode/agents/codereview.md"

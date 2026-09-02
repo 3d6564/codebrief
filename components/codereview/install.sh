@@ -213,7 +213,7 @@ write_codex_toml() {
     tmp="$(mktemp)"
     {
         printf '%s\n' 'name = "codereview"'
-        printf '%s\n' 'description = "Reviews GitHub pull requests by number."'
+        printf '%s\n' 'description = "Reviews pull requests and merge requests."'
         printf '%s\n' 'sandbox_mode = "read-only"'
         printf '%s\n' 'developer_instructions = """'
         cat "$PROMPT_SOURCE"
@@ -253,7 +253,7 @@ install_opencode() {
     refuse_competing "$root/command/codereview.md"
     write_composed_markdown "$PACKAGING/opencode/agent-frontmatter.md" "$dest_agent"
     write_raw_file "$PACKAGING/opencode/command.md" "$dest_command"
-    echo "Restart OpenCode, then select the codereview agent or run /codereview <PR number>."
+    echo "Restart OpenCode, then select codereview or run /codereview <URL or number>."
 }
 
 install_prompt() {
@@ -279,7 +279,7 @@ install_claude() {
     write_composed_markdown "$PACKAGING/claude/agent-frontmatter.md" "$agent_dest"
     write_composed_markdown "$PACKAGING/claude/skill-frontmatter.md" "$skill_dest"
     echo "Restart Claude Code if it did not already watch the agents directory."
-    echo "Run /codereview <PR number>, or start a session with --agent codereview."
+    echo "Run /codereview <URL or number>, or start a session with --agent codereview."
 }
 
 install_cursor() {
@@ -290,7 +290,7 @@ install_cursor() {
         dest="$TARGET_DIR/.cursor/skills/codereview/SKILL.md"
     fi
     write_composed_markdown "$PACKAGING/cursor/skill-frontmatter.md" "$dest"
-    echo "In Cursor Agent chat, run /codereview <PR number>."
+    echo "In Cursor Agent chat, run /codereview <URL or number>."
 }
 
 install_copilot() {

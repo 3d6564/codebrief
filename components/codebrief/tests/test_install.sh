@@ -32,6 +32,17 @@ assert_contains "$PROJECT_DIR/prompt/codebrief.md" "record of prior confirmed de
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "https://github.com/3d6564/codefactory"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "If the host has a choice or question tool"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'instead of "canonical"'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'GitLab Issues and Boards, Jira'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'Writing `CONTRIBUTING.md`'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'In Quick mode, still choose the provider route'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'always ask whether to preview shared'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'only to guidance files that were approved'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'priority, effort, or category labels'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'T-shirt sizes'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'When the user confirmed a classification scheme'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'tags, or equivalent mechanism'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'Include classification only when the'
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" "provider's pull request or merge request"
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" "mode: primary"
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*": deny'
 assert_contains "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md" '"*.env": deny'
@@ -40,6 +51,7 @@ assert_contains "$PROJECT_DIR/packaging/opencode/command.md" 'User focus or targ
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "collaboration and version control"
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "should explicitly"
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "Incremental refresh"
+assert_contains "$PROJECT_DIR/README.md" 'after updating Codefactory or changing Codebrief'
 
 if bash "$PROJECT_DIR/install.sh" --local >/dev/null 2>&1; then
     fail "--local without a path should fail"

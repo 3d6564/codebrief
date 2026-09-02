@@ -49,7 +49,11 @@ rules, test gates, collaboration and version control, security boundaries,
 allowed agent actions, and completion criteria.
 
 Collaboration coverage must include default-branch policy, issue or ticket
-selection, and board or label state when a tracker or GitHub Project is in use.
+selection, and board or label state when a tracker is in use. The user selects
+GitHub, GitLab, Jira, another provider, multiple providers, or no tracker before
+provider-specific questions begin. Confirm any priority, effort, and category
+scheme before including it in project guidance. Generated instructions state
+when required values are applied and make them part of completion checks.
 Confirmed answers become short hard rules in `AGENTS.md` or the equivalent
 agent file, with the full procedure in `INSTRUCTIONS.md` or `CONTRIBUTING.md`.
 
@@ -76,7 +80,9 @@ CI, code, and stated preferences disagree.
 
 Show the intended sections, rules, exclusions, and open questions. Write only
 after explicit approval. Re-read the result and check that every directive is
-supported by repository evidence or a user answer.
+supported by repository evidence or a user answer. Preview and approve
+`INSTRUCTIONS.md`, `CONTRIBUTING.md`, and each `AGENTS.md` reference as separate
+actions.
 
 ### 7. Incremental refresh
 
@@ -108,6 +114,9 @@ The generated `INSTRUCTIONS.md` should:
 - avoid repeating long architecture documents that can be linked by path
 - keep always-on hard rules short enough for `AGENTS.md`; do not invent board
   or label names
+
+When requested, generate `CONTRIBUTING.md` from the confirmed collaboration
+workflow. Use provider terms and preserve unrelated existing content.
 
 ## Non-goals
 

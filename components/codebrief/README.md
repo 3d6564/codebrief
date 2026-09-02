@@ -5,7 +5,8 @@
 # Codebrief
 
 Codebrief is an interview assistant that learns how a developer wants a project
-handled, then writes those choices to `INSTRUCTIONS.md` for a coding agent.
+handled, then writes those choices to `INSTRUCTIONS.md` and optional shared
+contribution guidance.
 
 It first inspects the repository, asks short sets of follow-up questions, and
 branches into the areas that fit the project. It covers details that generic
@@ -16,7 +17,7 @@ agent instructions often miss, including:
 - comments, docstrings, naming, typing, and error handling
 - log format, levels, fields, redaction, and destinations
 - test types, exact commands, CI gates, and the definition of done
-- issues, project boards, default-branch policy, and pull-request handoff
+- GitHub, GitLab, Jira, other issue and board routes, labels, and review handoff
 - secrets, sensitive data, network access, and approval boundaries
 - UI, API, data/ML, cloud, security, and AI-agent concerns when relevant
 - what the coding agent may edit, install, execute, commit, or deploy
@@ -45,12 +46,13 @@ interactive terminal can pick one.
 | `copilot` | `~/.copilot/agents/codebrief.agent.md` | `.github/agents/codebrief.agent.md` | Select the `codebrief` custom agent |
 | `codex` | `~/.codex/agents/codebrief.toml` | `.codex/agents/codebrief.toml` | Ask Codex to use the `codebrief` agent |
 
-Use `--yes` for a non-interactive install. The installer copies files, so rerun
-it after changing Codebrief itself. Restart the target agent after install.
+Use `--yes` for a non-interactive install. The installer copies files. Rerun it
+after updating Codefactory or changing Codebrief so the installed capability
+receives the new behavior. Restart the target agent after installation.
 
-Codebrief does not write into `AGENTS.md`, `CLAUDE.md`, or
-`copilot-instructions.md`. Those files guide the project's coding agent, not
-this interview.
+Installing Codebrief does not modify `AGENTS.md`, `CLAUDE.md`, or
+`copilot-instructions.md`. During an interview, Codebrief changes project
+guidance only through separately approved follow-up actions.
 
 ## Use
 
@@ -72,8 +74,9 @@ Codebrief offers three depths:
 
 It does not write during discovery. Before creating or updating
 `INSTRUCTIONS.md`, it shows the rules it plans to include, calls out unresolved
-questions, and asks for approval. Confirmed always-on constraints can later be
-added to `AGENTS.md` or `CONTRIBUTING.md` as a separate approved change.
+questions, and asks for approval. It can separately preview and create or update
+`CONTRIBUTING.md`, then add concise references to both guidance files in
+applicable `AGENTS.md` files. Each file requires separate approval.
 
 Run Codebrief again after updating it or when the repository changes. It treats
 the existing `INSTRUCTIONS.md` as the record of prior decisions and asks only

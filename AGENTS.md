@@ -7,6 +7,7 @@ agents. Current components are `codebrief` and `codereview`.
 
 ## Working Rules
 
+- Read and follow `INSTRUCTIONS.md` and `CONTRIBUTING.md`.
 - Keep each component focused and separately installable.
 - Keep component prompts and adapter frontmatter inside that component.
 - Ask whether Codebrief has been used before a Codefactory capability starts.
@@ -18,6 +19,8 @@ agents. Current components are `codebrief` and `codereview`.
 
 - `components/codebrief/`: project-instruction interview capability.
 - `components/codereview/`: report-first pull-request review capability.
+- `INSTRUCTIONS.md`: shared repository working, safety, and reporting rules.
+- `CONTRIBUTING.md`: issue, branch, pull-request, and review workflow.
 - `install.sh`: dispatches installation to one selected component.
 - `tests/test_install.sh`: root dispatcher checks.
 

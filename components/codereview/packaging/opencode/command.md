@@ -1,10 +1,11 @@
 ---
-description: Review one GitHub pull request by number.
+description: Review one pull request or merge request.
 agent: codereview
 ---
 
-Review GitHub pull request number `$1` in the current repository.
+Review pull request or merge request reference `$ARGUMENTS` for the current
+repository. A reference can be a provider URL or an unambiguous item number.
 
 Follow the Codereview agent's Codebrief question, repository-guidance, network
 approval, report-only, and review requirements. Do not treat additional text as
-a second pull-request number.
+another review item.

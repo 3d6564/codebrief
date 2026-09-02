@@ -7,6 +7,7 @@ for coding agents. It is an interview assistant, not a code generator.
 
 ## Working Rules
 
+- Read and follow `../../INSTRUCTIONS.md` and `../../CONTRIBUTING.md`.
 - Keep the interview adaptive. Do not turn it into one long fixed form.
 - Use simple, direct language and explain uncommon terms.
 - Keep observed facts, user-confirmed choices, and assumptions separate.
@@ -26,7 +27,7 @@ for coding agents. It is an interview assistant, not a code generator.
 
 ## Project Layout
 
-- `prompt/codebrief.md`: canonical interview prompt.
+- `prompt/codebrief.md`: main interview prompt.
 - `packaging/`: per-agent frontmatter and OpenCode command.
 - `docs/INTERVIEW_DESIGN.md`: interview stages and design decisions.
 - `docs/art/`: mark and other artwork.
