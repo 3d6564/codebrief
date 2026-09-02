@@ -46,8 +46,9 @@ interactive terminal can pick one.
 | `copilot` | `~/.copilot/agents/codebrief.agent.md` | `.github/agents/codebrief.agent.md` | Select the `codebrief` custom agent |
 | `codex` | `~/.codex/agents/codebrief.toml` | `.codex/agents/codebrief.toml` | Ask Codex to use the `codebrief` agent |
 
-Use `--yes` for a non-interactive install. The installer copies files, so rerun
-it after changing Codebrief itself. Restart the target agent after install.
+Use `--yes` for a non-interactive install. The installer copies files. Rerun it
+after updating Codefactory or changing Codebrief so the installed capability
+receives the new behavior. Restart the target agent after installation.
 
 Installing Codebrief does not modify `AGENTS.md`, `CLAUDE.md`, or
 `copilot-instructions.md`. During an interview, Codebrief changes project

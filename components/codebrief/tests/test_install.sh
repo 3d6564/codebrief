@@ -49,6 +49,7 @@ assert_contains "$PROJECT_DIR/packaging/opencode/command.md" 'User focus or targ
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "collaboration and version control"
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "should explicitly"
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "Incremental refresh"
+assert_contains "$PROJECT_DIR/README.md" 'after updating Codefactory or changing Codebrief'
 
 if bash "$PROJECT_DIR/install.sh" --local >/dev/null 2>&1; then
     fail "--local without a path should fail"
