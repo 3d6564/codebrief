@@ -47,6 +47,11 @@ other configured providers through available tools. It asks before network
 access, performs a read-only review by default, and reports findings with file
 and line references. It makes provider changes only when explicitly requested.
 
+For a follow-up review, ask Codereview to recheck prior findings. It marks each
+finding Fixed, Not fixed, or Cannot check from current code and test evidence.
+It then previews only Fixed review comments and asks for approval before it
+resolves them.
+
 ## Verify
 
 ```bash

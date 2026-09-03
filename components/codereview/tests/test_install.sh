@@ -18,6 +18,10 @@ assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Do not infer the answer'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'GitHub, GitLab, and other'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'provider URL or a positive'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Do not block a local review'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Follow-up Verification'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Fixed**, **Not fixed**, or **Cannot check'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Network approval does not authorize review-comment resolution'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Do not resolve unrelated, outdated, informational, or duplicate review'
 
 if bash "$PROJECT_DIR/install.sh" --local >/dev/null 2>&1; then
     fail "--local without a path should fail"
