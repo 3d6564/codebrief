@@ -15,110 +15,93 @@
       <stop offset="1" stop-color="#93d9ca"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#050912" flood-opacity=".45"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#050912" flood-opacity=".45"/>
     </filter>
   </defs>
 
   <rect width="1200" height="360" rx="24" fill="#0d1424"/>
   <rect width="1200" height="360" rx="24" fill="url(#grid)" opacity=".55"/>
-  <path d="M0 292C180 236 311 331 474 283s290-43 414 1 211 42 312-9v85H0z" fill="#111d32"/>
+  <path d="M0 286C172 233 304 330 469 280s294-40 402 3 214 42 329-13v90H0z" fill="#111d32"/>
 
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
-    <text x="58" y="60" fill="#75b8ff" font-size="14" font-weight="700" letter-spacing="4">BRIEF  /  BUILD  /  REVIEW  /  IMPROVE</text>
-    <text x="54" y="116" fill="#f4f8ff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="58" font-weight="800" letter-spacing="-2">Codefactory</text>
-    <text x="58" y="153" fill="#aebbd0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18">A better way through the work.</text>
+    <text x="64" y="81" fill="#75b8ff" font-size="16" font-weight="700" letter-spacing="4">BRIEF  /  BUILD  /  REVIEW  /  IMPROVE</text>
+    <text x="60" y="146" fill="#f4f8ff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="800" letter-spacing="-2">Codefactory</text>
+    <text x="64" y="190" fill="#aebbd0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">A better way through the work.</text>
 
-    <!-- Repository evidence and developer choices enter as separate inputs. -->
-    <g transform="translate(58 192)" font-size="9" font-weight="700">
-      <rect width="126" height="34" rx="17" fill="#18253d" stroke="#52627d"/>
-      <circle cx="21" cy="17" r="5" fill="#68d5c1"/>
-      <text x="34" y="21" fill="#dce6f5">REPOSITORY</text>
-      <rect y="48" width="126" height="34" rx="17" fill="#18253d" stroke="#52627d"/>
-      <circle cx="21" cy="65" r="5" fill="#f6ae4a"/>
-      <text x="34" y="69" fill="#dce6f5">DEVELOPER</text>
+    <g font-size="14" font-weight="700">
+      <rect x="64" y="238" width="151" height="38" rx="19" fill="#18253d" stroke="#52627d"/>
+      <circle cx="86" cy="257" r="5" fill="#68d5c1"/>
+      <text x="101" y="262" fill="#dce6f5">REPOSITORY</text>
+      <rect x="64" y="288" width="151" height="38" rx="19" fill="#18253d" stroke="#52627d"/>
+      <circle cx="86" cy="307" r="5" fill="#f6ae4a"/>
+      <text x="101" y="312" fill="#dce6f5">DEVELOPER</text>
+    </g>
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M215 257h9c15 0 15 25 31 25" stroke="#68d5c1" stroke-width="3"/>
+      <path d="M215 307h9c15 0 15-25 31-25" stroke="#f6ae4a" stroke-width="3"/>
+    </g>
+
+    <g transform="translate(255 229)">
+      <rect width="134" height="106" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <path d="M32 38h70M32 54h50M32 70h61" stroke="#aebbd0" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="20" cy="38" r="4" fill="#68d5c1"/>
+      <circle cx="20" cy="54" r="4" fill="#f6ae4a"/>
+      <circle cx="20" cy="70" r="4" fill="#aebbd0"/>
+      <text x="67" y="94" text-anchor="middle" fill="#f6ae4a" font-size="11" font-weight="700">CODEBRIEF</text>
+    </g>
+
+    <g fill="none" stroke="#e9dfc5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M389 282h30"/><path d="m411 274 9 8-9 8"/>
+    </g>
+
+    <g transform="translate(430 229)" filter="url(#shadow)">
+      <path d="M0 0h86l18 18v88H0z" fill="url(#paper)"/>
+      <path d="M86 0v18h18" fill="#d0c3a4"/>
+      <text x="12" y="25" fill="#a04729" font-size="8" font-weight="800">INSTRUCTIONS</text>
+      <path d="M12 39h76M12 53h61M12 67h70" stroke="#8f8268" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="18" cy="87" r="5" fill="#318979"/>
+      <path d="m15 87 2 2 4-5" fill="none" stroke="#fff9e9" stroke-width="1.5"/>
+      <text x="29" y="91" fill="#4d554f" font-size="8" font-weight="700">GUIDES CODE</text>
     </g>
 
     <g fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M184 209h13c10 0 10 25 21 25M184 257h13c10 0 10-23 21-23M218 234h1"/>
-      <path d="m211 227 9 7-9 7"/>
+      <path d="M534 282h30"/><path d="m556 274 9 8-9 8"/>
     </g>
 
-    <!-- Codebrief turns context into operating instructions. -->
-    <g transform="translate(226 174)" filter="url(#shadow)">
-      <path d="M0 19 14 0h134l14 19v117H0z" fill="#18253d" stroke="#6f82a3"/>
-      <rect x="17" y="39" width="128" height="62" rx="8" fill="#0d1424"/>
-      <circle cx="31" cy="54" r="5" fill="#f6ae4a"/>
-      <path d="M44 52h78M44 66h62M44 80h70" stroke="#aebbd0" stroke-width="3" stroke-linecap="round"/>
-      <text x="81" y="121" text-anchor="middle" fill="#f6ae4a" font-size="11" font-weight="800">CODEBRIEF</text>
-      <path d="M33 136v19M129 136v19" stroke="#6f82a3" stroke-width="6"/>
-    </g>
-
-    <path d="M388 234h33" fill="none" stroke="#f6ae4a" stroke-width="3" stroke-linecap="round"/>
-    <path d="m413 227 9 7-9 7" fill="none" stroke="#f6ae4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- The approved brief travels with the code. -->
-    <g transform="translate(429 190)" filter="url(#shadow)">
-      <path d="M0 0h88l16 16v91H0z" fill="url(#paper)"/>
-      <path d="M88 0v16h16" fill="#d0c3a4"/>
-      <text x="12" y="24" fill="#a04729" font-size="8" font-weight="800">INSTRUCTIONS</text>
-      <path d="M12 35h76M12 47h61M12 59h70" stroke="#8f8268" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="18" cy="79" r="5" fill="#318979"/>
-      <path d="m15 79 2 2 4-5" fill="none" stroke="#fff9e9" stroke-width="1.5"/>
-      <text x="29" y="83" fill="#4d554f" font-size="8" font-weight="700">GUIDES BUILD</text>
+    <g transform="translate(575 229)">
+      <rect width="134" height="106" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <path d="m45 36-15 17 15 17M89 36l15 17-15 17M76 29 58 77" fill="none" stroke="#75b8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="67" y="94" text-anchor="middle" fill="#75b8ff" font-size="11" font-weight="700">WRITE CODE</text>
     </g>
 
     <g fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M533 234h34"/><path d="m559 227 9 7-9 7"/>
+      <path d="M709 282h30"/><path d="m731 274 9 8-9 8"/>
     </g>
 
-    <!-- Coding station uses the brief during implementation. -->
-    <g transform="translate(575 174)" filter="url(#shadow)">
-      <path d="M0 19 14 0h134l14 19v117H0z" fill="#18253d" stroke="#6f82a3"/>
-      <rect x="17" y="39" width="128" height="62" rx="8" fill="#0d1424"/>
-      <path d="m53 55-15 15 15 15M108 55l15 15-15 15M89 49 71 91" fill="none" stroke="#75b8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="81" y="121" text-anchor="middle" fill="#75b8ff" font-size="10" font-weight="800">WRITE BETTER CODE</text>
-      <path d="M33 136v19M129 136v19" stroke="#6f82a3" stroke-width="6"/>
-    </g>
-
-    <g fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M737 234h34"/><path d="m763 227 9 7-9 7"/>
-    </g>
-
-    <!-- Codereview is the quality-control gate. -->
-    <g transform="translate(779 174)" filter="url(#shadow)">
-      <path d="M0 19 14 0h134l14 19v117H0z" fill="#18253d" stroke="#6f82a3"/>
-      <rect x="17" y="39" width="128" height="62" rx="8" fill="#0d1424"/>
-      <circle cx="67" cy="67" r="20" fill="none" stroke="#e87883" stroke-width="4"/>
-      <path d="m82 82 16 16" stroke="#e87883" stroke-width="5" stroke-linecap="round"/>
-      <path d="m107 57 7 7 13-16" fill="none" stroke="#68d5c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="81" y="121" text-anchor="middle" fill="#e87883" font-size="11" font-weight="800">CODEREVIEW</text>
-      <path d="M33 136v19M129 136v19" stroke="#6f82a3" stroke-width="6"/>
+    <g transform="translate(750 229)">
+      <rect width="134" height="106" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <circle cx="57" cy="51" r="20" fill="none" stroke="#e87883" stroke-width="4"/>
+      <path d="m72 66 16 16" stroke="#e87883" stroke-width="5" stroke-linecap="round"/>
+      <path d="m96 39 7 7 13-16" fill="none" stroke="#68d5c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="67" y="94" text-anchor="middle" fill="#e87883" font-size="11" font-weight="700">CODEREVIEW</text>
     </g>
 
     <g fill="none" stroke="#68d5c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M941 234h34"/><path d="m967 227 9 7-9 7"/>
+      <path d="M884 282h30"/><path d="m906 274 9 8-9 8"/>
     </g>
 
-    <!-- Reviewed work leaves as the finished product. -->
-    <g transform="translate(983 185)" filter="url(#shadow)">
-      <path d="M0 20 58 0l116 20-58 22z" fill="#b8eee2"/>
-      <path d="M0 20v85l116 24V42z" fill="url(#product)"/>
-      <path d="M116 42v87l58-30V20z" fill="#68bfae"/>
-      <path d="M58 0v23l58 19" fill="none" stroke="#4c9f90" stroke-width="3"/>
-      <circle cx="29" cy="56" r="9" fill="#318979"/>
-      <path d="m24 56 4 4 8-10" fill="none" stroke="#effffb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="45" y="61" fill="#153d37" font-size="11" font-weight="800">BETTER</text>
-      <text x="45" y="76" fill="#153d37" font-size="11" font-weight="800">WORK</text>
+    <g transform="translate(925 229)" filter="url(#shadow)">
+      <path d="M0 0h191l20 20v86H0z" fill="url(#product)"/>
+      <path d="M191 0v20h20" fill="#68bfae"/>
+      <circle cx="28" cy="43" r="9" fill="#318979"/>
+      <path d="m23 43 4 4 8-10" fill="none" stroke="#effffb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="48" y="47" fill="#153d37" font-size="13" font-weight="800">BETTER WORK</text>
+      <path d="M28 64h153M28 78h118" stroke="#4c9f90" stroke-width="3" stroke-linecap="round"/>
+      <text x="28" y="96" fill="#2f7065" font-size="8" font-weight="700" letter-spacing="1">REVIEWED OUTPUT</text>
     </g>
 
-    <!-- One continuous production line connects every stage. -->
-    <path d="M45 329h1110v18H45z" fill="#0d1424" stroke="#52627d" stroke-width="2"/>
-    <path d="M65 338h1070" stroke="#75b8ff" stroke-width="3" stroke-dasharray="17 13"/>
-    <g fill="#52627d">
-      <circle cx="91" cy="347" r="7"/><circle cx="180" cy="347" r="7"/><circle cx="269" cy="347" r="7"/>
-      <circle cx="358" cy="347" r="7"/><circle cx="447" cy="347" r="7"/><circle cx="536" cy="347" r="7"/>
-      <circle cx="625" cy="347" r="7"/><circle cx="714" cy="347" r="7"/><circle cx="803" cy="347" r="7"/>
-      <circle cx="892" cy="347" r="7"/><circle cx="981" cy="347" r="7"/><circle cx="1070" cy="347" r="7"/>
-    </g>
+    <path d="M46 342h1108" stroke="#52627d" stroke-width="4"/>
+    <path d="M64 342h1072" stroke="#75b8ff" stroke-width="2" stroke-dasharray="14 12"/>
   </g>
 </svg>
