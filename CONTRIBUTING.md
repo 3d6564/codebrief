@@ -60,6 +60,11 @@ Set `status: in-review`. Tell the owner it is ready to review. Do not merge.
 The pull request is the review handoff. State files changed, checks run, known
 risks, and work left out of scope.
 
+Pull requests to `main` require review from the owners in `.github/CODEOWNERS`.
+GitHub does not let a pull-request author approve their own pull request. The
+repository owner may merge their own pull requests through the `main` ruleset
+bypass.
+
 Squash merge after review.
 
 ## After merge
