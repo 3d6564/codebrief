@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Codefactory</title>
+  <desc id="desc">Codefactory packages Codebrief and Codereview as focused, independently installable capabilities for coding agents.</desc>
+
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#26324a" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9f0f8"/>
+      <stop offset="1" stop-color="#aebbd0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#050912" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="24" fill="#0d1424"/>
+  <rect width="1200" height="360" rx="24" fill="url(#grid)" opacity=".55"/>
+  <path d="M0 286C172 233 304 330 469 280s294-40 402 3 214 42 329-13v90H0z" fill="#111d32"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="64" y="81" fill="#75b8ff" font-size="16" font-weight="700" letter-spacing="4">FOCUSED  /  PACKAGED  /  INSTALLABLE</text>
+    <text x="60" y="146" fill="#f4f8ff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="800" letter-spacing="-2">Codefactory</text>
+    <text x="64" y="190" fill="#aebbd0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">Purpose-built capabilities for coding agents.</text>
+
+    <g transform="translate(64 234)" font-size="12" font-weight="700">
+      <rect width="214" height="90" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <circle cx="28" cy="30" r="8" fill="#f6ae4a"/>
+      <text x="48" y="35" fill="#f4f8ff" font-size="18">CODEBRIEF</text>
+      <text x="28" y="65" fill="#aebbd0" font-weight="500">PROJECT INSTRUCTIONS</text>
+    </g>
+
+    <g fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M278 279h72"/>
+      <path d="m341 271 10 8-10 8"/>
+    </g>
+
+    <g transform="translate(375 234)" font-size="12" font-weight="700">
+      <rect width="214" height="90" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <circle cx="28" cy="30" r="8" fill="#e87883"/>
+      <text x="48" y="35" fill="#f4f8ff" font-size="18">CODEREVIEW</text>
+      <text x="28" y="65" fill="#aebbd0" font-weight="500">REPORT-FIRST REVIEW</text>
+    </g>
+
+    <g transform="translate(650 43)" filter="url(#shadow)">
+      <rect width="472" height="274" rx="22" fill="#18253d" stroke="#6f82a3"/>
+      <path d="M0 66h472" stroke="#33425d" stroke-width="2"/>
+      <circle cx="30" cy="33" r="6" fill="#e87883"/>
+      <circle cx="50" cy="33" r="6" fill="#f6ae4a"/>
+      <circle cx="70" cy="33" r="6" fill="#68d5c1"/>
+      <text x="98" y="39" fill="#dce6f5" font-size="14" font-weight="700" letter-spacing="2">CAPABILITY LINE</text>
+
+      <g transform="translate(34 96)">
+        <rect width="118" height="116" rx="16" fill="#0d1424" stroke="#52627d"/>
+        <path d="M32 34h54M32 50h42M32 66h50" stroke="#aebbd0" stroke-width="4" stroke-linecap="round"/>
+        <text x="59" y="95" text-anchor="middle" fill="#f6ae4a" font-size="11" font-weight="700">PROMPT</text>
+      </g>
+      <path d="M165 154h45" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round"/>
+      <path d="m201 146 10 8-10 8" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <g transform="translate(224 96)">
+        <rect width="118" height="116" rx="16" fill="#0d1424" stroke="#52627d"/>
+        <path d="M34 30h50v56H34z" fill="url(#steel)"/>
+        <path d="M44 43h30M44 55h24M44 67h28" stroke="#52627d" stroke-width="3" stroke-linecap="round"/>
+        <text x="59" y="105" text-anchor="middle" fill="#75b8ff" font-size="11" font-weight="700">ADAPTERS</text>
+      </g>
+      <path d="M355 154h45" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round"/>
+      <path d="m391 146 10 8-10 8" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <g transform="translate(414 112)">
+        <path d="M0 0h28v84H0z" fill="#75b8ff"/>
+        <path d="M-9 16h46M-9 68h46" stroke="#dce6f5" stroke-width="4"/>
+      </g>
+      <text x="236" y="248" text-anchor="middle" fill="#aebbd0" font-size="12" font-weight="700" letter-spacing="2">ONE TOOLKIT  /  SEPARATE INSTALLS</text>
+    </g>
+  </g>
+</svg>

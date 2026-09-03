@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/art/codefactory.svg" width="100%" alt="Codefactory packages Codebrief and Codereview as focused, independently installable capabilities for coding agents.">
+</p>
+
 # Codefactory
 
 Codefactory packages focused capabilities for coding agents. Each component is
