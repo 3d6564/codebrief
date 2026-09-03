@@ -24,53 +24,69 @@
     <text x="60" y="146" fill="#f4f8ff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="800" letter-spacing="-2">Codefactory</text>
     <text x="64" y="190" fill="#aebbd0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">Purpose-built capabilities for coding agents.</text>
 
-    <g transform="translate(64 234)" font-size="12" font-weight="700">
-      <rect width="214" height="90" rx="18" fill="#18253d" stroke="#6f82a3"/>
-      <circle cx="28" cy="30" r="8" fill="#f6ae4a"/>
-      <text x="48" y="35" fill="#f4f8ff" font-size="18">CODEBRIEF</text>
-      <text x="28" y="65" fill="#aebbd0" font-weight="500">PROJECT INSTRUCTIONS</text>
+    <g transform="translate(64 232)" font-size="12" font-weight="700">
+      <rect width="488" height="92" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <text x="24" y="25" fill="#aebbd0" font-size="10" letter-spacing="2">PRODUCTION STATUS</text>
+      <path d="M24 38h440" stroke="#33425d" stroke-width="2"/>
+      <circle cx="30" cy="57" r="6" fill="#f6ae4a"/>
+      <text x="48" y="62" fill="#f4f8ff" font-size="14">CODEBRIEF</text>
+      <text x="185" y="62" fill="#aebbd0" font-weight="500">PROJECT INSTRUCTIONS</text>
+      <rect x="406" y="49" width="58" height="18" rx="9" fill="#213b3c"/>
+      <text x="435" y="62" text-anchor="middle" fill="#68d5c1" font-size="9">READY</text>
+      <circle cx="30" cy="78" r="6" fill="#e87883"/>
+      <text x="48" y="83" fill="#f4f8ff" font-size="14">CODEREVIEW</text>
+      <text x="185" y="83" fill="#aebbd0" font-weight="500">REVIEW REPORTS</text>
+      <rect x="406" y="70" width="58" height="18" rx="9" fill="#213b3c"/>
+      <text x="435" y="83" text-anchor="middle" fill="#68d5c1" font-size="9">READY</text>
     </g>
 
-    <g fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M278 279h72"/>
-      <path d="m341 271 10 8-10 8"/>
-    </g>
+    <g transform="translate(612 35)" filter="url(#shadow)">
+      <rect width="526" height="292" rx="22" fill="#18253d" stroke="#6f82a3"/>
+      <path d="M0 62h526" stroke="#33425d" stroke-width="2"/>
+      <circle cx="28" cy="31" r="6" fill="#e87883"/>
+      <circle cx="48" cy="31" r="6" fill="#f6ae4a"/>
+      <circle cx="68" cy="31" r="6" fill="#68d5c1"/>
+      <text x="96" y="37" fill="#dce6f5" font-size="14" font-weight="700" letter-spacing="2">FACTORY FLOOR  02</text>
 
-    <g transform="translate(375 234)" font-size="12" font-weight="700">
-      <rect width="214" height="90" rx="18" fill="#18253d" stroke="#6f82a3"/>
-      <circle cx="28" cy="30" r="8" fill="#e87883"/>
-      <text x="48" y="35" fill="#f4f8ff" font-size="18">CODEREVIEW</text>
-      <text x="28" y="65" fill="#aebbd0" font-weight="500">REPORT-FIRST REVIEW</text>
-    </g>
+      <path d="M36 96h454M36 105h454" stroke="#52627d" stroke-width="5"/>
+      <path d="M76 105v24M263 105v24M450 105v24" stroke="#75b8ff" stroke-width="4"/>
 
-    <g transform="translate(650 43)" filter="url(#shadow)">
-      <rect width="472" height="274" rx="22" fill="#18253d" stroke="#6f82a3"/>
-      <path d="M0 66h472" stroke="#33425d" stroke-width="2"/>
-      <circle cx="30" cy="33" r="6" fill="#e87883"/>
-      <circle cx="50" cy="33" r="6" fill="#f6ae4a"/>
-      <circle cx="70" cy="33" r="6" fill="#68d5c1"/>
-      <text x="98" y="39" fill="#dce6f5" font-size="14" font-weight="700" letter-spacing="2">CAPABILITY LINE</text>
+      <g transform="translate(50 126)">
+        <path d="M0 0h132v91H0z" fill="#0d1424" stroke="#52627d"/>
+        <path d="M12 0V-17h108V0" fill="#253550" stroke="#6f82a3"/>
+        <circle cx="25" cy="19" r="6" fill="#f6ae4a"/>
+        <path d="M18 37h96M18 52h72" stroke="#aebbd0" stroke-width="4" stroke-linecap="round"/>
+        <path d="M42 91v22M90 91v22" stroke="#6f82a3" stroke-width="6"/>
+        <text x="66" y="76" text-anchor="middle" fill="#f6ae4a" font-size="10" font-weight="700">BRIEF STATION</text>
+      </g>
 
-      <g transform="translate(34 96)">
-        <rect width="118" height="116" rx="16" fill="#0d1424" stroke="#52627d"/>
-        <path d="M32 34h54M32 50h42M32 66h50" stroke="#aebbd0" stroke-width="4" stroke-linecap="round"/>
-        <text x="59" y="95" text-anchor="middle" fill="#f6ae4a" font-size="11" font-weight="700">PROMPT</text>
+      <g transform="translate(210 126)">
+        <path d="M0 0h132v91H0z" fill="#0d1424" stroke="#52627d"/>
+        <path d="M12 0V-17h108V0" fill="#253550" stroke="#6f82a3"/>
+        <circle cx="25" cy="19" r="6" fill="#e87883"/>
+        <circle cx="55" cy="43" r="18" fill="none" stroke="#e87883" stroke-width="4"/>
+        <path d="m68 56 15 15" stroke="#e87883" stroke-width="5" stroke-linecap="round"/>
+        <path d="M42 91v22M90 91v22" stroke="#6f82a3" stroke-width="6"/>
+        <text x="66" y="82" text-anchor="middle" fill="#e87883" font-size="10" font-weight="700">REVIEW STATION</text>
       </g>
-      <path d="M165 154h45" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round"/>
-      <path d="m201 146 10 8-10 8" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <g transform="translate(224 96)">
-        <rect width="118" height="116" rx="16" fill="#0d1424" stroke="#52627d"/>
-        <path d="M34 30h50v56H34z" fill="url(#steel)"/>
-        <path d="M44 43h30M44 55h24M44 67h28" stroke="#52627d" stroke-width="3" stroke-linecap="round"/>
-        <text x="59" y="105" text-anchor="middle" fill="#75b8ff" font-size="11" font-weight="700">ADAPTERS</text>
+
+      <g transform="translate(370 126)">
+        <path d="M0 0h106v91H0z" fill="#0d1424" stroke="#52627d"/>
+        <path d="M12 0V-17h82V0" fill="#253550" stroke="#6f82a3"/>
+        <path d="M31 28h44v39H31z" fill="url(#steel)"/>
+        <path d="m31 28 22-13 22 13M53 15v52" fill="none" stroke="#52627d" stroke-width="3"/>
+        <path d="M30 91v22M76 91v22" stroke="#6f82a3" stroke-width="6"/>
+        <text x="53" y="82" text-anchor="middle" fill="#75b8ff" font-size="10" font-weight="700">PACKAGE</text>
       </g>
-      <path d="M355 154h45" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round"/>
-      <path d="m391 146 10 8-10 8" fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <g transform="translate(414 112)">
-        <path d="M0 0h28v84H0z" fill="#75b8ff"/>
-        <path d="M-9 16h46M-9 68h46" stroke="#dce6f5" stroke-width="4"/>
+
+      <path d="M25 238h476v26H25z" fill="#0d1424" stroke="#6f82a3" stroke-width="2"/>
+      <path d="M50 251h426" stroke="#75b8ff" stroke-width="3" stroke-dasharray="14 12"/>
+      <g fill="#52627d">
+        <circle cx="61" cy="264" r="8"/><circle cx="122" cy="264" r="8"/><circle cx="183" cy="264" r="8"/>
+        <circle cx="244" cy="264" r="8"/><circle cx="305" cy="264" r="8"/><circle cx="366" cy="264" r="8"/>
+        <circle cx="427" cy="264" r="8"/><circle cx="476" cy="264" r="8"/>
       </g>
-      <text x="236" y="248" text-anchor="middle" fill="#aebbd0" font-size="12" font-weight="700" letter-spacing="2">ONE TOOLKIT  /  SEPARATE INSTALLS</text>
+      <text x="263" y="284" text-anchor="middle" fill="#aebbd0" font-size="10" font-weight="700" letter-spacing="2">SEPARATE CAPABILITIES  /  ONE SYSTEM</text>
     </g>
   </g>
 </svg>
