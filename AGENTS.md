@@ -18,8 +18,8 @@ agents. Current components are `codebrief` and `codereview`.
 - Never implement on `main`. Create and switch to a topic branch first.
 - Before the first implementation edit, select one or more GitHub Issues, set
   `status: in-progress`, and require `P0`–`P4`, `XS`–`XL`, and `bug` /
-  `feature` / `docs` / `packaging`. Ask when a required value is missing or
-  unclear.
+  `feature` / `docs` / `packaging`. Set and report a missing priority or size.
+  Ask when category is missing or any required value is unclear.
 - After required checks pass, open the pull request, set `status: in-review`,
   and tell the owner it is ready to review.
 - After merge, set `status: done`, update local `main`, and delete the local

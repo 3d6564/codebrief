@@ -163,7 +163,7 @@ Issue labels, and open the pull request when required checks pass.
 Ask before merge, release, a new component, a new agent install target, a
 dependency change, a hosted-model send, or other network use.
 
-## Definition of done
+## Definition of ready for review
 
 - Requested behavior and stated acceptance conditions are met.
 - Existing public behavior remains intact unless an approved change requires
@@ -178,6 +178,13 @@ dependency change, a hosted-model send, or other network use.
   non-GitHub network action occurred.
 - The final response lists changed files, checks, risks, assumptions, and
   deferred work.
+
+## Definition of done after merge
+
+- Each selected issue has `status: done`.
+- Local `main` matches `origin/main`.
+- The local and remote topic branches are deleted.
+- The merged branch is not reused.
 
 ## Open questions
 
