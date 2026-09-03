@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Codefactory</title>
+  <desc id="desc">Codebrief prepares project instructions that guide better coding, then Codereview inspects the work before improved code leaves the factory.</desc>
+
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#26324a" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff9e9"/>
+      <stop offset="1" stop-color="#e9dfc5"/>
+    </linearGradient>
+    <linearGradient id="product" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dff8f2"/>
+      <stop offset="1" stop-color="#93d9ca"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#050912" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="24" fill="#0d1424"/>
+  <rect width="1200" height="360" rx="24" fill="url(#grid)" opacity=".55"/>
+  <path d="M0 286C172 233 304 330 469 280s294-40 402 3 214 42 329-13v90H0z" fill="#111d32"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="64" y="81" fill="#75b8ff" font-size="16" font-weight="700" letter-spacing="4">BRIEF  /  BUILD  /  REVIEW  /  IMPROVE</text>
+    <text x="60" y="146" fill="#f4f8ff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="800" letter-spacing="-2">Codefactory</text>
+    <text x="64" y="190" fill="#aebbd0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">A better way through the work.</text>
+
+    <g font-size="14" font-weight="700">
+      <rect x="64" y="238" width="151" height="38" rx="19" fill="#18253d" stroke="#52627d"/>
+      <circle cx="86" cy="257" r="5" fill="#68d5c1"/>
+      <text x="101" y="262" fill="#dce6f5">REPOSITORY</text>
+      <rect x="64" y="288" width="151" height="38" rx="19" fill="#18253d" stroke="#52627d"/>
+      <circle cx="86" cy="307" r="5" fill="#f6ae4a"/>
+      <text x="101" y="312" fill="#dce6f5">DEVELOPER</text>
+    </g>
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M215 257h9c15 0 15 25 31 25" stroke="#68d5c1" stroke-width="3"/>
+      <path d="M215 307h9c15 0 15-25 31-25" stroke="#f6ae4a" stroke-width="3"/>
+    </g>
+
+    <g transform="translate(255 229)">
+      <rect width="134" height="106" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <path d="M32 38h70M32 54h50M32 70h61" stroke="#aebbd0" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="20" cy="38" r="4" fill="#68d5c1"/>
+      <circle cx="20" cy="54" r="4" fill="#f6ae4a"/>
+      <circle cx="20" cy="70" r="4" fill="#aebbd0"/>
+      <text x="67" y="94" text-anchor="middle" fill="#f6ae4a" font-size="11" font-weight="700">CODEBRIEF</text>
+    </g>
+
+    <g fill="none" stroke="#e9dfc5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M389 282h30"/><path d="m411 274 9 8-9 8"/>
+    </g>
+
+    <g transform="translate(430 229)" filter="url(#shadow)">
+      <path d="M0 0h86l18 18v88H0z" fill="url(#paper)"/>
+      <path d="M86 0v18h18" fill="#d0c3a4"/>
+      <text x="12" y="25" fill="#a04729" font-size="8" font-weight="800">INSTRUCTIONS</text>
+      <path d="M12 39h76M12 53h61M12 67h70" stroke="#8f8268" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="18" cy="87" r="5" fill="#318979"/>
+      <path d="m15 87 2 2 4-5" fill="none" stroke="#fff9e9" stroke-width="1.5"/>
+      <text x="29" y="91" fill="#4d554f" font-size="8" font-weight="700">GUIDES CODE</text>
+    </g>
+
+    <g fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M534 282h30"/><path d="m556 274 9 8-9 8"/>
+    </g>
+
+    <g transform="translate(575 229)">
+      <rect width="134" height="106" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <path d="m45 36-15 17 15 17M89 36l15 17-15 17M76 29 58 77" fill="none" stroke="#75b8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="67" y="94" text-anchor="middle" fill="#75b8ff" font-size="11" font-weight="700">WRITE CODE</text>
+    </g>
+
+    <g fill="none" stroke="#75b8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M709 282h30"/><path d="m731 274 9 8-9 8"/>
+    </g>
+
+    <g transform="translate(750 229)">
+      <rect width="134" height="106" rx="18" fill="#18253d" stroke="#6f82a3"/>
+      <circle cx="57" cy="51" r="20" fill="none" stroke="#e87883" stroke-width="4"/>
+      <path d="m72 66 16 16" stroke="#e87883" stroke-width="5" stroke-linecap="round"/>
+      <path d="m96 39 7 7 13-16" fill="none" stroke="#68d5c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="67" y="94" text-anchor="middle" fill="#e87883" font-size="11" font-weight="700">CODEREVIEW</text>
+    </g>
+
+    <g fill="none" stroke="#68d5c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M884 282h30"/><path d="m906 274 9 8-9 8"/>
+    </g>
+
+    <g transform="translate(925 229)" filter="url(#shadow)">
+      <path d="M0 0h191l20 20v86H0z" fill="url(#product)"/>
+      <path d="M191 0v20h20" fill="#68bfae"/>
+      <circle cx="28" cy="43" r="9" fill="#318979"/>
+      <path d="m23 43 4 4 8-10" fill="none" stroke="#effffb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="48" y="47" fill="#153d37" font-size="13" font-weight="800">BETTER WORK</text>
+      <path d="M28 64h153M28 78h118" stroke="#4c9f90" stroke-width="3" stroke-linecap="round"/>
+      <text x="28" y="96" fill="#2f7065" font-size="8" font-weight="700" letter-spacing="1">REVIEWED OUTPUT</text>
+    </g>
+
+    <path d="M46 342h1108" stroke="#52627d" stroke-width="4"/>
+    <path d="M64 342h1072" stroke="#75b8ff" stroke-width="2" stroke-dasharray="14 12"/>
+  </g>
+</svg>

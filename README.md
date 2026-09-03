@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/art/codefactory.svg" width="100%" alt="Codebrief prepares project instructions that guide better coding, then Codereview inspects the work before improved code leaves the factory.">
+</p>
+
 # Codefactory
 
 Codefactory packages focused capabilities for coding agents. Each component is

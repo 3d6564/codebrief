@@ -1,7 +1,11 @@
-# Codefactory
+<p align="center">
+  <img src="docs/art/codereview.svg" width="100%" alt="Codereview examines pull-request context and repository guidance, verifies findings, and reports before remote action.">
+</p>
 
-Codefactory packages focused capabilities for coding agents. The first is
-`codereview`: a report-first pull-request and merge-request reviewer.
+# Codereview
+
+Codereview is Codefactory's report-first pull-request and merge-request
+reviewer.
 
 Before reviewing, Codereview asks whether Codebrief has been used for the
 target. A confirmed answer makes the applicable instruction files required
