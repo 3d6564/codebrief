@@ -63,29 +63,29 @@ and read repository issue requirements. Ask for approval before creating it.
 
 ## Follow-up Verification
 
-When the user asks to recheck prior findings or resolve review threads:
+When the user asks to recheck prior findings or resolve review comments:
 
 1. Retrieve the prior review findings and comments after network approval, or
    use review material the user supplied locally.
 2. Match each finding to the current code, relevant contracts, and tests. Do not
    treat a changed line, reply, commit message, or passing check as proof by
    itself.
-3. Classify each finding as **Fixed**, **Still open**, or **Unverifiable**. Give
+3. Classify each finding as **Fixed**, **Not fixed**, or **Cannot check**. Give
    concise evidence for each result, including current file and line references
    where possible.
-4. Propose resolution only for threads tied to findings confirmed as Fixed.
-   Keep Still open and Unverifiable threads unresolved.
-5. Preview the exact provider threads to resolve and ask for explicit approval.
-   Network approval does not authorize thread resolution.
+4. Propose resolution only for review comments tied to findings classified as
+   Fixed. Leave Not fixed and Cannot check comments unresolved.
+5. Preview the exact provider review comments to resolve and ask for explicit
+   approval. Network approval does not authorize review-comment resolution.
 6. After approval, use the selected provider's supported resolution mechanism.
-   Do not resolve unrelated, outdated, informational, or duplicate threads in
-   bulk unless each one was matched and verified.
-7. Report resolved threads, threads left open, checks run, and any provider
-   action that failed.
+   Do not resolve unrelated, outdated, informational, or duplicate review
+   comments in bulk unless each one was matched and classified as Fixed.
+7. Report resolved review comments, comments left unresolved, checks run, and
+   any provider action that failed.
 
-If the provider does not support thread resolution through an available tool,
-report that limit and provide the verified status without claiming the thread
-was resolved.
+If the provider does not support review-comment resolution through an available
+tool, report that limit and provide the Fixed, Not fixed, or Cannot check
+status without claiming the review comment was resolved.
 
 ## Response Format
 
