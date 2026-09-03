@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/art/codefactory.svg" width="100%" alt="Codefactory packages Codebrief and Codereview as focused, independently installable capabilities for coding agents.">
+  <img src="docs/art/codefactory.svg" width="100%" alt="Codebrief prepares project instructions that guide better coding, then Codereview inspects the work before improved code leaves the factory.">
 </p>
 
 # Codefactory
