@@ -7,9 +7,10 @@
 Codereview is Codefactory's report-first pull-request and merge-request
 reviewer.
 
-Before reviewing, Codereview asks whether Codebrief has been used for the
-target. A confirmed answer makes the applicable instruction files required
-review context. It never infers Codebrief use from an `INSTRUCTIONS.md` file.
+Before reviewing, Codereview checks applicable `INSTRUCTIONS.md` files for the
+`<!-- codebrief -->` marker. If no marker exists, it asks whether Codebrief has
+been used with Yes as the recommended first choice. A marker or confirmed answer
+makes the applicable instruction files required review context.
 
 ## Install
 

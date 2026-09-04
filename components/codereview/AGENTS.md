@@ -10,10 +10,12 @@ It does not implement product features in a target repository.
 
 - Read and follow `../../INSTRUCTIONS.md` and `../../CONTRIBUTING.md`.
 - Keep each capability focused and separately installable.
-- Ask whether Codebrief has been used before a capability starts. Never infer it
-  from the presence of `INSTRUCTIONS.md`.
-- If the user confirms Codebrief was used, read applicable instruction files
-  before acting and treat them as project-specific requirements.
+- Before a review starts, check applicable `INSTRUCTIONS.md` files for
+  `<!-- codebrief -->`. Treat the marker as confirmation that Codebrief was
+  used; otherwise ask with Yes as the recommended first choice.
+- If the marker exists or the user confirms Codebrief was used, read applicable
+  instruction files before acting and treat them as project-specific
+  requirements.
 - Review is report-only until the user explicitly requests provider comments,
   reviews, issues, or other remote changes.
 - Do not read secrets, generated evidence, local databases, or private notes.

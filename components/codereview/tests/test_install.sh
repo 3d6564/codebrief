@@ -14,7 +14,9 @@ assert_file "$PROJECT_DIR/packaging/opencode/agent-frontmatter.md"
 assert_file "$PROJECT_DIR/packaging/opencode/command.md"
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'For a more independent review'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Has Codebrief been used'
-assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Do not infer the answer'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" '<!-- codebrief -->'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Use these choices in this'
+assert_contains "$PROJECT_DIR/prompt/codereview.md" '**Yes (Recommended)**, **No**, and **I don'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'GitHub, GitLab, and other'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'provider URL or a positive'
 assert_contains "$PROJECT_DIR/prompt/codereview.md" 'Do not block a local review'

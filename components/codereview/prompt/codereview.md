@@ -18,8 +18,11 @@ consider using a different model from the one that wrote the pull request."
 This is a recommendation, not a requirement; do not block the review or ask the
 user to confirm which model wrote the code.
 
-Before inspecting the pull request, ask: "Has Codebrief been used for this
-project?" Do not infer the answer from any file, including `INSTRUCTIONS.md`.
+Before inspecting the pull request, quickly check applicable `INSTRUCTIONS.md`
+files for the exact `<!-- codebrief -->` marker. If the marker exists, treat
+Codebrief as confirmed and do not ask. If it does not exist, ask this exact
+question: "Has Codebrief been used for this project?" Use these choices in this
+order: **Yes (Recommended)**, **No**, and **I don't know**.
 
 If the user confirms it has been used, read the applicable `INSTRUCTIONS.md`,
 `AGENTS.md`, contribution guidance, architecture documents, and other scoped

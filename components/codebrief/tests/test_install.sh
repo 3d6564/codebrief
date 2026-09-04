@@ -33,7 +33,9 @@ assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Do not repeat questions the 
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "the missing file as an existing project rule."
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "Treat these reference edits as a separate approved action."
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "list the exact files that would"
+assert_contains "$PROJECT_DIR/prompt/codebrief.md" '<!-- codebrief -->'
 assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" "### 7. Incremental refresh"
+assert_contains "$PROJECT_DIR/docs/INTERVIEW_DESIGN.md" '<!-- codebrief -->'
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "https://github.com/3d6564/codefactory"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" "If the host has a choice or question tool"
 assert_contains "$PROJECT_DIR/prompt/codebrief.md" 'instead of "canonical"'
