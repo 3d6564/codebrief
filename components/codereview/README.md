@@ -7,9 +7,10 @@
 Codereview is Codefactory's report-first pull-request and merge-request
 reviewer.
 
-Before reviewing, Codereview checks applicable `INSTRUCTIONS.md` files for the
-`<!-- codebrief -->` marker. If no marker exists, it asks whether Codebrief has
-been used with Yes as the recommended first choice. A marker or confirmed answer
+Before reviewing, Codereview checks whether `<!-- codebrief -->` is a standalone
+comment on the first nonblank line after the top-level title in an applicable
+`INSTRUCTIONS.md`. If not, it asks whether Codebrief has been used with Yes as
+the recommended first choice. A marker in that placement or a confirmed answer
 makes the applicable instruction files required review context.
 
 ## Install
@@ -50,7 +51,9 @@ unambiguous pull-request or merge-request number:
 Codereview detects the repository provider and supports GitHub, GitLab, and
 other configured providers through available tools. It asks before network
 access, performs a read-only review by default, and reports findings with file
-and line references. It makes provider changes only when explicitly requested.
+and line references. It makes provider review-workflow changes only when
+explicitly requested. Never edit target repository files, create commits, push
+code, modify branches, or merge the review item.
 
 For a follow-up review, ask Codereview to recheck prior findings. It marks each
 finding Fixed, Not fixed, or Cannot check from current code and test evidence.

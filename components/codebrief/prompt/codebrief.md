@@ -501,8 +501,9 @@ Use only sections that add value. A typical file is:
 
 Writing rules:
 
-- Put the exact `<!-- codebrief -->` marker directly below the top-level title
-  whenever Codebrief creates or updates `INSTRUCTIONS.md`.
+- Put the exact `<!-- codebrief -->` marker as a standalone comment on the first
+  nonblank line after the top-level title whenever Codebrief creates or updates
+  `INSTRUCTIONS.md`.
 - Use direct action statements.
 - Keep sections compact and remove empty sections.
 - Include exact commands in code formatting.
