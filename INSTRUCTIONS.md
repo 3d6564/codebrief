@@ -188,7 +188,7 @@ dependency change, a hosted-model send, or other network use.
 - The local and remote topic branches are deleted.
 - The merged branch is not reused.
 
-## Open questions
+## GitHub Projects
 
-- GitHub Project name, number, and board statuses are not set. Use GitHub Issue
-  labels for state. Do not invent a board workflow.
+- GitHub Projects is not configured. Use GitHub Issue labels for state. Do not
+  invent project identifiers, fields, statuses, or board transitions.
